@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery_mini.js"></script>
+    <style>
+        #a{
+            display: flex;
+            justify-content: space-around;
+        }
+        .b{
+            width: 200px;
+            height: 200px;
+            background-color:aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+    </div>
+    <script>
+        let b=document.getElementsByClassName('.b');
+        let num=[0,0,0];
+        for(let i=0;i<$('.b').length;i++){
+            $('.b').eq(i).click(function(){
+                num[i]==0 ? ($('.b').eq(i).css("background","pink"),num[i]=1) : ($('.b').eq(i).css("background","black"),num[i]=0)
+                console.log(num[i]);
+            })
+        }
+    </script>
+</body>
+</html>

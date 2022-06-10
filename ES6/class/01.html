@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let</title>
+</head>
+<body>
+    <script>
+        //声明变量
+        let a;
+        let b,c,d;
+        let e=100;
+        let n=111,w=www,x=11111;
+        //1.变量不能重复
+        // let zjh=20;
+        // let zjh=21;
+
+
+        //2.块级作用域  在作用域内外部不能访问
+        // if else while for
+
+        //3.不存在变量提前
+        console.log(zjr);
+        let zjr=25;
+
+        //4.不影响作用域链
+        {
+            let school='山职';
+            function fun(){
+                console.log(school);
+            }
+            fun();
+        }
+    </script>
+</body>
+</html>
